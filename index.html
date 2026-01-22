@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>now_one</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="container">
+    <h1 class="title">now_one</h1>
+
+    <!-- タスク入力 -->
+    <input
+      id="taskInput"
+      type="text"
+      placeholder="いまやること、ひとつだけ"
+      autocomplete="off"
+    />
+
+    <!-- モード選択 -->
+    <div class="mode">
+      <label>
+        <input type="radio" name="mode" value="timer" checked>
+        タイマーあり
+      </label>
+      <label>
+        <input type="radio" name="mode" value="free">
+        無制限
+      </label>
+    </div>
+
+    <!-- タイマー時間選択（タイマーあり用） -->
+    <div class="time-select">
+      <select id="timeSelect">
+  <option value="5">5分</option>
+  <option value="10">10分</option>
+  <option value="15" selected>15分</option>
+  <option value="25">25分</option>
+  <option value="45">45分</option>
+  <option value="60">60分</option>
+</select>
+
+    </div>
+
+    <!-- 開始 -->
+    <button id="startBtn">はじめる</button>
+
+    <!-- タイマー表示 -->
+    <p id="timerDisplay" class="timer hidden">00:00</p>
+
+    <!-- 操作ボタン -->
+    <div class="actions">
+      <button id="stopBtn" class="hidden">ストップ</button>
+      <button id="doneBtn">おわった</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
